@@ -25,6 +25,7 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
+      
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +37,9 @@ class HomeView extends GetView<HomeController> {
                   onPressed: controller.increment,
                   child: const Text('Increment'),
                 ),
+
                 const SizedBox(width: 10),
+
                 ElevatedButton(
                   onPressed: () => {
                     if (controller.count.value > 0) {
@@ -65,7 +68,9 @@ class HomeView extends GetView<HomeController> {
                 ),
               ],
             ),
+
             const SizedBox(height: 10),
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

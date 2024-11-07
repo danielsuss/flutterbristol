@@ -3,6 +3,8 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -52,8 +54,8 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAHBrw5RQRtmGnoXGm0UDs5njHTDSIyauU',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['FIREBASE_API_KEY']!,
     appId: '1:304405949353:web:600f633b45c4cd151532b8',
     messagingSenderId: '304405949353',
     projectId: 'flutterbristol',
