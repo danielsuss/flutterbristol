@@ -43,4 +43,4 @@ app.*.map.json
 /android/app/release
 
 # Flutter environment variables
-.env
+/lib/firebase_config.dart
