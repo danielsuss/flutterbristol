@@ -1,0 +1,14 @@
+name: flutterbristol
+
+packages:
+    - apps/**
+    - packages/**
+
+scripts:
+    analyze:
+        exec: dart analyze .
+
+command:
+    bootstrap:
+        runPubGetInParallel: false
+        usePubspecOverrides: true
